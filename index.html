@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Floxe RP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: url('20250712_113829-1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      animation: zoomBackground 20s ease-in-out infite alternate;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    
+    body {
+      background: linear-gradient(to bottom right, #0f2027,#203a43,#2c5364);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #00ffe5;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      color: #cccccc;
+    }
+
+    .ip-box {
+      background-color: #1e1e1e;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 1px solid #00ffe5;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .button-group {
+      margin-top: 15px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    button, .link-button {
+      padding: 10px 20px;
+      background-color: #00ffe5;
+      color: #121212;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    button:hover, .link-button:hover {
+      background-color: #00d8c0;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.8em;
+      color: #777;
+    }
+
+    .corner-image {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      object-fit: cover;
+      border: 2px solid #00ffe5;
+    }
+  </style>
+  .corner-logo {
+   position: fixed;
+   top: 15px;
+   right: 15px;
+   width: 60px;
+   height: 60px;
+   object-fit: cover;
+   border-radius: 10px;
+   border: 2px solid #00ffe5;
+   z-index: 999;
+   background-color: rgba(0, 0, 0, 0.3);
+   padding: 4px;
+ }
+<body>
+
+<img src="20250712_113829-1.jpg" alt="Logo Floxe RP" class="corner-logo" />
+
+  <h1>Floxe RP</h1>
+  <p>📢 Server Information</p>
+
+  <div class="ip-box" id="serverIP">128.199.100.10:7779</div><br>
+
+  <div class="button-group">
+    <button onclick="copyIP()">Copy IP</button>
+    <a href="https://discord.gg/xxxxxx" class="link-button" target="_blank">Join Discord</a>
+    <a href="https://samp.com/forum" class="link-button" target="_blank">Info Lain</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Floxe Roleplay. All rights reserved.
+  </footer>
+
+  <script>
+    function copyIP() {
+      const ipText = document.getElementById("serverIP").textContent;
+      navigator.clipboard.writeText(ipText).then(() => {
+        alert("IP berhasil disalin: " + ipText);
+      });
+    }
+  </script>
+
+</body>
+</html>
