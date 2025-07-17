@@ -8,18 +8,40 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #ffffff;
-      color: #000000;
+      color: #ffffff;
+      background: url('https://i.imgur.com/JcnF2FL.jpg') no-repeat center center fixed;
+      background-size: cover;
+      animation: bgMove 60s linear infinite;
+      position: relative;
+    }
+    
+    @keyframes bgMove {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 1000px 0;
+      }
+    }
+      
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
     }
 
-    /* Logo pojok kanan */
     #logo-floxe {
       position: fixed;
       top: 10px;
       right: 10px;
       width: 60px;
       height: auto;
-      z-index: 999;
+      z-index: 2;
+      border-radius: 6px;
     }
 
     .container {
@@ -27,21 +49,25 @@
       margin: 80px auto 40px auto;
       padding: 20px;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
       font-size: 36px;
       margin-bottom: 5px;
+      text-shadow: 2px 2px 4px #000;
     }
 
     h2 {
       font-size: 18px;
       font-weight: normal;
-      color: #888;
+      color: #ddd;
+      text-shadow: 1px 1px 3px #000;
     }
 
     .server-ip {
-      background-color: #111;
+      background-color: rgba(0, 0, 0, 0.8);
       color: #00ffff;
       padding: 10px 20px;
       margin: 20px auto;
@@ -76,9 +102,11 @@
     footer {
       text-align: center;
       font-size: 14px;
-      color: #999;
+      color: #ccc;
       margin-top: 40px;
       padding-bottom: 20px;
+      position: relative;
+      z-index: 1;
     }
 
     @media (min-width: 600px) {
@@ -97,8 +125,9 @@
 </head>
 <body>
 
-  <!-- Logo di pojok -->
-  <img src="https://i.imgur.com/Skmz9yO.jpeg" alt="Logo" id="logo-floxe">
+  <div class="overlay"></div>
+
+  <img src="https://i.imgur.com/Skmz9yO.jpg" alt="Logo" id="logo-floxe">
 
   <div class="container">
     <h1>Floxe RP</h1>
@@ -110,9 +139,8 @@
       <a href="#" onclick="copyIP()">Copy IP</a>
       <a href="https://discord.gg/yourdiscord" target="_blank">Join Discord</a>
       <a href="#">Info Lain</a>
-      <a href="#">Staff List</a>
-      <a href="#">Peraturan Server</a>
-      <a href="#">Cara Join</a>
+      <a href="stafflist.html">Staff List</a>
+      <a href="rules.html">Peraturan Server</a>
     </div>
   </div>
 
