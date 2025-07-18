@@ -9,21 +9,27 @@
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       color: #ffffff;
-      background: url('https://i.imgur.com/JcnF2FL.jpg') no-repeat center center fixed;
-      background-size: cover;
-      animation: bgMove 60s linear infinite;
+      overflow: hidden;
       position: relative;
     }
-    
-    @keyframes bgMove {
-      0% {
-        background-position: 0 0;
-      }
-      100% {
-        background-position: 1000px 0;
-      }
+
+    #animated-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1549921296-3a6b77e7c5f3?auto=format&fit=crop&w=1920&q=80') repeat-x;
+      background-size: cover;
+      animation: moveBg 60s linear infinite;
+      z-index: -2;
     }
-      
+
+    @keyframes moveBg {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
     .overlay {
       background-color: rgba(0, 0, 0, 0.6);
       position: fixed;
@@ -31,7 +37,7 @@
       left: 0;
       height: 100%;
       width: 100%;
-      z-index: 0;
+      z-index: -1;
     }
 
     #logo-floxe {
@@ -125,6 +131,7 @@
 </head>
 <body>
 
+  <div id="animated-bg"></div>
   <div class="overlay"></div>
 
   <img src="https://i.imgur.com/Skmz9yO.jpg" alt="Logo" id="logo-floxe">
@@ -132,7 +139,7 @@
   <div class="container">
     <h1>Floxe RP</h1>
     <h2>📢 Server Information</h2>
-    
+
     <div class="server-ip">#ServerMaju!</div>
 
     <div class="buttons">
